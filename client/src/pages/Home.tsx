@@ -9,7 +9,6 @@ import {
   Menu,
   Phone,
   ShoppingBag,
-  Sparkles,
   Truck,
   X,
 } from "lucide-react";
@@ -83,7 +82,7 @@ const values = [
     text: "Doces e salgados pensados para celebrar, receber visitas ou simplesmente tornar o dia mais gostoso.",
   },
   {
-    icon: Sparkles,
+    icon: null,
     number: "03",
     title: "Sempre especial",
     text: "Do pedido mais simples à grande encomenda, colocamos a mesma dedicação em cada detalhe.",
@@ -273,7 +272,7 @@ export default function Home() {
             <div className="values-grid">
               {values.map((value, index) => {
                 const Icon = value.icon;
-                return <article className={`value-card reveal delay-${index + 1}`} key={value.number}><div className="value-top"><span className="value-number">{value.number}</span><Icon size={24} strokeWidth={1.4} /></div><h3>{value.title}</h3><p>{value.text}</p></article>;
+                return <article className={`value-card reveal delay-${index + 1}`} key={value.number}><div className="value-top"><span className="value-number">{value.number}</span>{Icon ? <Icon size={24} strokeWidth={1.4} /> : null}</div><h3>{value.title}</h3><p>{value.text}</p></article>;
               })}
             </div>
           </div>
