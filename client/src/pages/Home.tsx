@@ -234,7 +234,7 @@ export default function Home() {
 
         <section className="ticker" aria-label="Especialidades da Wikamana">
           <div className="ticker-track">
-            <span>Pastéis de nata</span><i>✳</i><span>Empadas artesanais</span><i>✳</i><span>Quiches especiais</span><i>✳</i><span>Doces para partilhar</span><i>✳</i><span>Pastéis de nata</span><i>✳</i><span>Empadas artesanais</span><i>✳</i>
+            <span>Pastéis de nata</span><span>Empadas artesanais</span><span>Quiches especiais</span><span>Doces para partilhar</span><span>Pastéis de nata</span><span>Empadas artesanais</span>
           </div>
         </section>
 
