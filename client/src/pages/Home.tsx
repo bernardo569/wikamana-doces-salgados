@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {
   ArrowRight,
-  ArrowUpRight,
   ChefHat,
   ChevronDown,
   Clock3,
@@ -128,9 +127,6 @@ function ProductCard({ product, index }: { product: (typeof products)[number]; i
       <div className="product-image-wrap">
         <img src={product.image} alt={product.name} loading="lazy" className="product-image" />
         <span className="product-tag">{product.tag}</span>
-        <a className="product-arrow" href={whatsappLink} target="_blank" rel="noreferrer" aria-label={`Encomendar ${product.name}`}>
-          <ArrowUpRight size={20} strokeWidth={1.8} />
-        </a>
       </div>
       <div className="product-meta">
         <div>
@@ -183,14 +179,14 @@ export default function Home() {
             {navItems.map((item) => (
               <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
             ))}
-            <a className="nav-order mobile-only" href={whatsappLink} target="_blank" rel="noreferrer">Fazer encomenda <ArrowUpRight size={16} /></a>
+            <a className="nav-order mobile-only" href={whatsappLink} target="_blank" rel="noreferrer">Fazer encomenda</a>
           </nav>
           <div className="header-actions">
             <a className="header-phone" href="tel:+244939622421" aria-label="Ligar para 939 622 421">
               <Phone size={16} />
               <span>939 622 421</span>
             </a>
-            <a className="button button-dark button-small header-cta" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar <ArrowUpRight size={16} /></a>
+            <a className="button button-dark button-small header-cta" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar</a>
             <button className="menu-toggle" type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen}>
               {menuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -209,7 +205,7 @@ export default function Home() {
               <p className="hero-lede">Doces e salgados feitos com tempo, cuidado e aquele toque especial que transforma qualquer momento.</p>
               <div className="hero-actions">
                 <a className="button button-primary" href="#menu">Explorar o menu <ArrowRight size={18} /></a>
-                <a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Falar connosco <span>↗</span></a>
+                <a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Falar connosco</a>
               </div>
               <div className="hero-footnote"><span className="mini-rule" /> Entregas em Camama Chimbicato <MapPin size={14} /></div>
             </div>
@@ -245,7 +241,7 @@ export default function Home() {
                 <div className="eyebrow eyebrow-blue"><span className="eyebrow-dot" /> O nosso menu</div>
                 <h2>Escolha o seu<br /><em>momento favorito.</em></h2>
               </div>
-              <div className="heading-side"><p>Receitas que chegam à mesa com sabor, textura e uma boa dose de carinho.</p><a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar agora <span>↗</span></a></div>
+              <div className="heading-side"><p>Receitas que chegam à mesa com sabor, textura e uma boa dose de carinho.</p><a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar agora</a></div>
             </div>
             <div className="product-grid">
               {products.map((product, index) => <ProductCard product={product} index={index} key={product.name} />)}
@@ -266,7 +262,7 @@ export default function Home() {
               <h2>Pequenos detalhes.<br /><em>Grandes vontades.</em></h2>
               <p>Na Wikamana, acreditamos que a comida tem o poder de mudar o ritmo de um dia. Por isso, fazemos cada doce e cada salgado com ingredientes escolhidos, receitas honestas e vontade de deixar uma memória boa.</p>
               <div className="signature"><span className="signature-line" /><span>Wikamana</span></div>
-              <a className="button button-outline" href={whatsappLink} target="_blank" rel="noreferrer">Conhecer a Wikamana <ArrowUpRight size={17} /></a>
+              <a className="button button-outline" href={whatsappLink} target="_blank" rel="noreferrer">Conhecer a Wikamana</a>
             </div>
           </div>
         </section>
@@ -289,7 +285,7 @@ export default function Home() {
               <div className="eyebrow eyebrow-light"><span className="eyebrow-dot" /> A entrega</div>
               <h2>O seu pedido,<br /><em>à sua porta.</em></h2>
               <p>Estamos em Camama Chimbicato e levamos as nossas fornadas até si. Envie uma mensagem, escolha os seus favoritos e tratamos do resto.</p>
-              <a className="button button-light" href={whatsappLink} target="_blank" rel="noreferrer">Pedir pelo WhatsApp <ArrowUpRight size={18} /></a>
+              <a className="button button-light" href={whatsappLink} target="_blank" rel="noreferrer">Pedir pelo WhatsApp</a>
             </div>
             <div className="delivery-details">
               <div className="detail-item"><span className="detail-icon"><MapPin size={20} /></span><div><small>Localização</small><strong>Camama Chimbicato</strong></div></div>
@@ -307,7 +303,7 @@ export default function Home() {
             <p className="closing-kicker">Para a sua próxima pausa</p>
             <h2>Vai querer<br /><em>mais um?</em></h2>
             <p className="closing-text">Uma mensagem basta para começar a escolher.</p>
-            <a className="button button-primary" href={whatsappLink} target="_blank" rel="noreferrer">Falar no WhatsApp <ArrowUpRight size={18} /></a>
+            <a className="button button-primary" href={whatsappLink} target="_blank" rel="noreferrer">Falar no WhatsApp</a>
           </div>
         </section>
       </main>
