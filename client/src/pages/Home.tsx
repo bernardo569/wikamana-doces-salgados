@@ -246,7 +246,7 @@ export default function Home() {
             <div className="product-grid">
               {products.map((product, index) => <ProductCard product={product} index={index} key={product.name} />)}
             </div>
-            <div className="menu-note reveal"><span className="menu-note-icon"><Sparkles size={16} /></span><span>Tem uma ocasião especial? Criamos combinações à medida para festas, reuniões e celebrações.</span><a href={whatsappLink} target="_blank" rel="noreferrer">Pedir sugestão <ArrowRight size={16} /></a></div>
+            <div className="menu-note reveal"><span>Tem uma ocasião especial? Criamos combinações à medida para festas, reuniões e celebrações.</span><a href={whatsappLink} target="_blank" rel="noreferrer">Pedir sugestão <ArrowRight size={16} /></a></div>
           </div>
         </section>
 
