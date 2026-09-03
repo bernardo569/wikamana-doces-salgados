@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import {
   ArrowRight,
+  CakeSlice,
   ChefHat,
   ChevronDown,
   Clock3,
+  CupSoda,
+  Egg,
   Heart,
   MapPin,
   Menu,
   Phone,
+  Sandwich,
   ShoppingBag,
   Truck,
+  Utensils,
   X,
 } from "lucide-react";
 
@@ -89,6 +94,15 @@ const values = [
   },
 ];
 
+const priceGroups = [
+  { title: "Salgados", note: "Preço por dúzia", icon: Utensils, items: [["Rissóis de camarão", "7.000 Kz"], ["Rissóis de atum", "7.000 Kz"], ["Pastéis massa tenra", "7.000 Kz"], ["Croquetes de carne", "7.000 Kz"], ["Coxinhas de frango", "7.000 Kz"], ["Empadas de frango", "7.000 Kz"], ["Chamucas de frango", "9.000 Kz"], ["Chamucas vegetais", "9.000 Kz"], ["Mini salgados de forno · 100 und.", "35.000 Kz"], ["Folar de carnes", "35.000 Kz"]] },
+  { title: "Doces", note: "Preço por dúzia", icon: CakeSlice, items: [["Pastéis de nata", "12.000 Kz"], ["Bolas de Berlim", "10.000 Kz"]] },
+  { title: "Pregos & acompanhamentos", note: "Preço por unidade", icon: Sandwich, items: [["Prego no pão", "4.500 Kz"], ["Prego no prato", "7.500 Kz"], ["Dose de batata frita", "1.400 Kz"]] },
+  { title: "Bolos & bebidas", note: "Preço por unidade", icon: CupSoda, items: [["Bebidas gasosas · Cola, Sprite, Fanta, Sumol", "800 Kz"], ["Bola de Berlim", "900 Kz"], ["Pastéis de nata", "1.000 Kz"], ["Fatia de bolo", "2.500 Kz"]] },
+  { title: "Sandes", note: "Preço por unidade", icon: Sandwich, items: [["Sandes mista", "1.900 Kz"], ["Croissant misto", "2.000 Kz"], ["Tosta mista", "2.500 Kz"], ["Tosta de atum", "3.000 Kz"]] },
+  { title: "Omeletes", note: "Preço por unidade", icon: Egg, items: [["Omelete simples", "3.000 Kz"], ["Omelete de legumes", "3.500 Kz"], ["Omelete c/ queijo e fiambre", "3.500 Kz"]] },
+];
+
 function SocialIcon({ type }: { type: "instagram" | "facebook" }) {
   if (type === "instagram") {
     return (
@@ -133,6 +147,18 @@ function ProductCard({ product, index }: { product: (typeof products)[number]; i
           <p>{product.detail}</p>
         </div>
         <span className="product-number">0{index + 1}</span>
+      </div>
+    </article>
+  );
+}
+
+function PriceGroup({ group, index }: { group: (typeof priceGroups)[number]; index: number }) {
+  const Icon = group.icon;
+  return (
+    <article className={`price-group reveal delay-${(index % 3) + 1}`}>
+      <div className="price-group-heading"><span className="price-group-icon"><Icon size={20} strokeWidth={1.6} /></span><div><h3>{group.title}</h3><small>{group.note}</small></div></div>
+      <div className="price-list">
+        {group.items.map(([name, price]) => <div className="price-row" key={`${group.title}-${name}`}><span className="price-item-icon"><Icon size={14} strokeWidth={1.7} /></span><span className="price-name">{name}</span><strong>{price}</strong></div>)}
       </div>
     </article>
   );
@@ -238,14 +264,14 @@ export default function Home() {
             <div className="section-heading reveal">
               <div>
                 <div className="eyebrow eyebrow-blue"><span className="eyebrow-dot" /> O nosso menu</div>
-                <h2>Escolha o seu<br /><em>momento favorito.</em></h2>
+                <h2>Escolha o seu<br /><em>favorito.</em></h2>
               </div>
-              <div className="heading-side"><p>Receitas que chegam à mesa com sabor, textura e uma boa dose de carinho.</p><a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar agora</a></div>
+              <div className="heading-side"><p>Consulte os nossos preços e faça a sua encomenda por WhatsApp.</p><a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar agora</a></div>
             </div>
-            <div className="product-grid">
-              {products.map((product, index) => <ProductCard product={product} index={index} key={product.name} />)}
+            <div className="price-grid">
+              {priceGroups.map((group, index) => <PriceGroup group={group} index={index} key={group.title} />)}
             </div>
-            <div className="menu-note reveal"><span>Tem uma ocasião especial? Criamos combinações à medida para festas, reuniões e celebrações.</span><a href={whatsappLink} target="_blank" rel="noreferrer">Pedir sugestão <ArrowRight size={16} /></a></div>
+            <div className="menu-note reveal"><span>Os preços podem variar conforme a quantidade e o tipo de encomenda. Fale connosco para confirmar disponibilidade.</span><a href={whatsappLink} target="_blank" rel="noreferrer">Pedir por WhatsApp <ArrowRight size={16} /></a></div>
           </div>
         </section>
 
