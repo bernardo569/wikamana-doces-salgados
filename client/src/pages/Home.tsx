@@ -268,6 +268,13 @@ export default function Home() {
               </div>
               <div className="heading-side"><p>Consulte os nossos preços e faça a sua encomenda por WhatsApp.</p><a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar agora</a></div>
             </div>
+            <div className="product-grid">
+              {products.map((product, index) => <ProductCard product={product} index={index} key={product.name} />)}
+            </div>
+            <div className="price-heading reveal">
+              <div className="eyebrow eyebrow-blue"><span className="eyebrow-dot" /> Catálogo de preços</div>
+              <p>Escolha os seus favoritos e consulte os valores antes de encomendar.</p>
+            </div>
             <div className="price-grid">
               {priceGroups.map((group, index) => <PriceGroup group={group} index={index} key={group.title} />)}
             </div>
