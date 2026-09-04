@@ -34,42 +34,42 @@ const products = [
     name: "Pastéis de nata",
     detail: "Crocantes por fora, cremosos no centro.",
     tag: "Doce da casa",
-    image: "/manus-storage/pastel-de-nata_b3b1789d.jpg",
+    image: "/manus-storage/pastel-de-nata-optimized_242528a4.webp",
     tone: "terracotta",
   },
   {
     name: "Quiche especial",
     detail: "Uma receita generosa para partilhar.",
     tag: "Salgado",
-    image: "/manus-storage/quiche_075f5398.jpg",
+    image: "/manus-storage/quiche-optimized_dab9488b.webp",
     tone: "blue",
   },
   {
     name: "Sortido de doces",
     detail: "Pequenos momentos, grandes sabores.",
     tag: "Encomenda",
-    image: "/manus-storage/doces_c499a1a3.jpg",
+    image: "/manus-storage/doces-optimized_9c51116c.webp",
     tone: "gold",
   },
   {
     name: "Cachorro especial",
     detail: "Quente, completo e com aquela crocância.",
     tag: "Salgado",
-    image: "/manus-storage/cachorro-quente_f7c73750.jpg",
+    image: "/manus-storage/cachorro-quente-optimized_43e88d38.webp",
     tone: "blue",
   },
   {
     name: "Empadas artesanais",
     detail: "Massa dourada e recheio cheio de sabor.",
     tag: "Favorito",
-    image: "/manus-storage/empadas_d497de8f.jpg",
+    image: "/manus-storage/empadas-optimized_ccd3643b.webp",
     tone: "terracotta",
   },
   {
     name: "Mesa de salgados",
     detail: "Para festas, encontros e dias especiais.",
     tag: "Para partilhar",
-    image: "/manus-storage/salgados_c448e048.jpg",
+    image: "/manus-storage/salgados-optimized_a980698e.webp",
     tone: "gold",
   },
 ];
@@ -125,7 +125,7 @@ function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <a href="#inicio" className={`brand ${compact ? "brand-compact" : ""}`} aria-label="Wikamana, voltar ao início">
       <span className="brand-mark">
-        <img src="/manus-storage/logo_4ee17ea3.jpg" alt="" />
+        <img src="/manus-storage/logo-optimized_ff45e914.webp" alt="" />
       </span>
       <span className="brand-copy">
         <strong>Wikamana</strong>
@@ -245,7 +245,7 @@ export default function Home() {
             <div className="hero-visual reveal is-visible delay-2">
               <div className="hero-stamp"><span>W</span><small>feito<br />para<br />partilhar</small></div>
               <div className="hero-main-image">
-                <img src="/manus-storage/pastel-de-nata_b3b1789d.jpg" alt="Pastéis de nata dourados da Wikamana" />
+                <img src="/manus-storage/pastel-de-nata-optimized_242528a4.webp" alt="Pastéis de nata dourados da Wikamana" />
               </div>
               <div className="floating-card floating-card-top">
                 <span className="floating-icon"><ShoppingBag size={16} /></span>
@@ -293,8 +293,8 @@ export default function Home() {
         <section className="about-section section-pad" id="sobre">
           <div className="container about-grid">
             <div className="about-collage reveal">
-              <div className="collage-main"><img src="/manus-storage/empadas_d497de8f.jpg" alt="Empadas douradas preparadas pela Wikamana" loading="lazy" /></div>
-              <div className="collage-small"><img src="/manus-storage/doces_c499a1a3.jpg" alt="Sortido de doces Wikamana" loading="lazy" /></div>
+              <div className="collage-main"><img src="/manus-storage/empadas-optimized_ccd3643b.webp" alt="Empadas douradas preparadas pela Wikamana" loading="lazy" /></div>
+              <div className="collage-small"><img src="/manus-storage/doces-optimized_9c51116c.webp" alt="Sortido de doces Wikamana" loading="lazy" /></div>
               <div className="collage-label"><span>Desde</span><strong>2021</strong><small>com sabor</small></div>
             </div>
             <div className="about-copy reveal delay-2">
@@ -372,7 +372,6 @@ export default function Home() {
         <div className="container footer-bottom"><span>© {new Date().getFullYear()} Wikamana</span><span>Camama Chimbicato · Luanda</span><a href="tel:+244939622421">939 622 421</a></div>
       </footer>
 
-      <a className="whatsapp-float" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Wikamana no WhatsApp"><span className="whatsapp-pulse" /><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4.5A11.45 11.45 0 0 0 6.1 21.7L4.5 27.5l6-1.55A11.5 11.5 0 1 0 16 4.5Z" fill="none" stroke="currentColor" strokeWidth="1.7" /><path d="M12.2 10.6c.3-.35.65-.4.97-.4.25 0 .5.02.72.03.24.02.54-.1.84.62.3.73 1.02 2.5 1.1 2.68.1.18.16.38.03.62-.12.25-.19.4-.38.61-.18.21-.4.46-.57.62-.2.18-.4.37-.17.74.24.37 1.05 1.72 2.26 2.78 1.55 1.38 2.86 1.81 3.27 2 .4.18.64.16.88-.1.24-.25 1-1.15 1.27-1.55.27-.4.53-.33.9-.2.37.13 2.33 1.1 2.73 1.3.4.2.66.3.76.47.1.18.1 1.02-.24 1.97-.33.95-1.93 1.82-2.67 1.94-.68.1-1.53.15-2.48-.15-.57-.18-1.3-.42-2.24-.83-3.94-1.7-6.52-5.68-6.72-5.95-.2-.27-1.6-2.14-1.6-4.08 0-1.94 1-2.9 1.34-3.3Z" fill="currentColor" /></svg><span className="whatsapp-label">WhatsApp</span></a>
     </div>
   );
 }
