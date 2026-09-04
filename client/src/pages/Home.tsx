@@ -323,7 +323,7 @@ export default function Home() {
               <div className="detail-item"><span className="detail-icon"><MapPin size={20} /></span><div><small>Localização</small><strong>Camama Chimbicato</strong></div></div>
               <div className="detail-item"><span className="detail-icon"><Clock3 size={20} /></span><div><small>Atendimento</small><strong>Todos os dias · por mensagem</strong></div></div>
               <div className="detail-item"><span className="detail-icon"><Truck size={20} /></span><div><small>Entrega</small><strong>Combinamos consigo no WhatsApp</strong></div></div>
-              <a className="delivery-number" href="tel:+244939622421" aria-label="Ligar para 939 622 421"><span className="delivery-phone-icon"><Phone size={17} /></span><span>939</span><strong>622 421</strong></a>
+              <a className="delivery-number" href="tel:+244939622421" aria-label="Ligar para 939 622 421"><span className="delivery-phone-icon"><Phone size={17} /></span><strong>939 622 421</strong></a>
             </div>
             <div className="delivery-shape shape-one" /><div className="delivery-shape shape-two" />
           </div>

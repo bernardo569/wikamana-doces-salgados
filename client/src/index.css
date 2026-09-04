@@ -240,11 +240,11 @@
   .detail-item div { display: flex; flex-direction: column; gap: .3rem; }
   .detail-item small { color: rgba(248,245,238,.52); font-size: .55rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
   .detail-item strong { color: #fff; font-size: .72rem; line-height: 1.45; }
-  .delivery-number { grid-column: span 2; display: flex; flex-direction: column; padding-top: 1.7rem; border-top: 1px solid rgba(248,245,238,.2); color: #f6b493; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: color .2s ease; }
+  .delivery-number { grid-column: span 2; display: flex; flex-direction: row; align-items: center; gap: .65rem; padding-top: 1.7rem; border-top: 1px solid rgba(248,245,238,.2); color: #f6b493; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: color .2s ease; }
   .delivery-number:hover { color: #fffdf8; }
-  .delivery-phone-icon { display: inline-flex; align-items: center; gap: .35rem; margin-bottom: .35rem; color: #f6b493; letter-spacing: 0; }
+  .delivery-phone-icon { display: inline-flex; align-items: center; color: #f6b493; letter-spacing: 0; }
   .delivery-number span { font-family: "Fraunces", serif; color: #f8f5ee; font-size: 1.15rem; font-style: italic; letter-spacing: 0; text-transform: none; }
-  .delivery-number strong { color: #f6b493; font-family: "Fraunces", serif; font-size: 2rem; line-height: 1; letter-spacing: -.03em; }
+  .delivery-number strong { color: #f6b493; font-family: "Fraunces", serif; font-size: 2rem; line-height: 1; letter-spacing: -.03em; white-space: nowrap; }
   .delivery-shape { position: absolute; border-radius: 50%; border: 1px solid rgba(248,245,238,.18); pointer-events: none; }
   .shape-one { width: 500px; height: 500px; right: -130px; top: -230px; }
   .shape-two { width: 380px; height: 380px; right: -45px; bottom: -240px; }
