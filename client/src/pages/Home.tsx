@@ -214,9 +214,9 @@ export default function Home() {
             <a className="nav-order mobile-only" href={whatsappLink} target="_blank" rel="noreferrer">Fazer encomenda</a>
           </nav>
           <div className="header-actions">
-            <a className="header-phone" href="tel:+244939622421" aria-label="Ligar para 939 622 421">
+            <a className="header-phone" href="tel:+244939622421" aria-label="Ligar para +244 939 622 421">
               <Phone size={16} />
-              <span>939 622 421</span>
+              <span>+244 939 622 421</span>
             </a>
             <a className="button button-dark button-small header-cta" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar</a>
             <button className="menu-toggle" type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen}>
@@ -327,7 +327,7 @@ export default function Home() {
               <div className="detail-item"><span className="detail-icon"><MapPin size={20} /></span><div><small>Localização</small><strong>Camama Chimbicato</strong></div></div>
               <div className="detail-item"><span className="detail-icon"><Clock3 size={20} /></span><div><small>Atendimento</small><strong>Todos os dias · por mensagem</strong></div></div>
               <div className="detail-item"><span className="detail-icon"><Truck size={20} /></span><div><small>Entrega</small><strong>Combinamos consigo no WhatsApp</strong></div></div>
-              <a className="delivery-number" href="tel:+244939622421" aria-label="Ligar para 939 622 421"><span className="delivery-phone-icon"><Phone size={17} /></span><strong>939 622 421</strong></a>
+              <a className="delivery-number" href="tel:+244939622421" aria-label="Ligar para +244 939 622 421"><span className="delivery-phone-icon"><Phone size={17} /></span><strong>+244 939 622 421</strong></a>
             </div>
             <div className="delivery-shape shape-one" /><div className="delivery-shape shape-two" />
           </div>
@@ -339,7 +339,7 @@ export default function Home() {
               <div className="eyebrow eyebrow-blue"><span className="eyebrow-dot" /> Faça a sua encomenda</div>
               <h2>O que vai<br /><em>saborear hoje?</em></h2>
               <p>Escreva o seu nome e diga-nos o que pretende. A mensagem abre diretamente no WhatsApp da Wikamana.</p>
-              <div className="order-callout"><Phone size={17} /><span>Resposta rápida pelo <strong>939 622 421</strong></span></div>
+              <div className="order-callout"><Phone size={17} /><span>Resposta rápida pelo <strong>+244 939 622 421</strong></span></div>
             </div>
             <form className="order-form" onSubmit={handleOrderSubmit}>
               <label htmlFor="customer-name">O seu nome</label>
@@ -367,7 +367,7 @@ export default function Home() {
           <p>Doces e salgados com sabor de casa.<br />Feitos para partilhar.</p>
           <div className="footer-socials"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram da Wikamana"><SocialIcon type="instagram" /></a><a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook da Wikamana"><SocialIcon type="facebook" /></a></div>
         </div>
-        <div className="container footer-bottom"><span>© {new Date().getFullYear()} Wikamana</span><span>Camama Chimbicato · Luanda</span><a href="tel:+244939622421">939 622 421</a></div>
+        <div className="container footer-bottom"><span>© {new Date().getFullYear()} Wikamana</span><span>Camama Chimbicato · Luanda</span><a href="tel:+244939622421">+244 939 622 421</a></div>
       </footer>
 
     </div>
