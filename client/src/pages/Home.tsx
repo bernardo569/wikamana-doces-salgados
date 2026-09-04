@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import {
   ArrowRight,
   CakeSlice,
@@ -12,6 +12,7 @@ import {
   Menu,
   Phone,
   Sandwich,
+  Send,
   ShoppingBag,
   Truck,
   Utensils,
@@ -167,6 +168,14 @@ function PriceGroup({ group, index }: { group: (typeof priceGroups)[number]; ind
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [customerName, setCustomerName] = useState("");
+  const [orderMessage, setOrderMessage] = useState("");
+
+  const handleOrderSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const message = `Olá Wikamana!%0A%0ANome: ${encodeURIComponent(customerName)}%0A Pedido: ${encodeURIComponent(orderMessage)}`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank", "noopener,noreferrer");
+  };
 
   useEffect(() => {
     const loaderTimer = window.setTimeout(() => setIsLoading(false), 700);
@@ -326,6 +335,24 @@ export default function Home() {
               <a className="delivery-number" href="tel:+244939622421" aria-label="Ligar para 939 622 421"><span className="delivery-phone-icon"><Phone size={17} /></span><strong>939 622 421</strong></a>
             </div>
             <div className="delivery-shape shape-one" /><div className="delivery-shape shape-two" />
+          </div>
+        </section>
+
+        <section className="order-section section-pad" id="encomenda">
+          <div className="container order-panel reveal">
+            <div className="order-copy">
+              <div className="eyebrow eyebrow-blue"><span className="eyebrow-dot" /> Faça a sua encomenda</div>
+              <h2>O que vai<br /><em>saborear hoje?</em></h2>
+              <p>Escreva o seu nome e diga-nos o que pretende. A mensagem abre diretamente no WhatsApp da Wikamana.</p>
+              <div className="order-callout"><Phone size={17} /><span>Resposta rápida pelo <strong>939 622 421</strong></span></div>
+            </div>
+            <form className="order-form" onSubmit={handleOrderSubmit}>
+              <label htmlFor="customer-name">O seu nome</label>
+              <input id="customer-name" name="name" value={customerName} onChange={(event) => setCustomerName(event.target.value)} placeholder="Como podemos chamar-lhe?" required />
+              <label htmlFor="order-message">O seu pedido</label>
+              <textarea id="order-message" name="message" value={orderMessage} onChange={(event) => setOrderMessage(event.target.value)} placeholder="Escreva os produtos e quantidades..." rows={5} required />
+              <button className="button button-primary" type="submit">Enviar para o WhatsApp <Send size={16} /></button>
+            </form>
           </div>
         </section>
 
