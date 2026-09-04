@@ -239,7 +239,6 @@ export default function Home() {
               <p className="hero-lede">Doces e salgados feitos com tempo, cuidado e aquele toque especial que transforma qualquer momento.</p>
               <div className="hero-actions">
                 <a className="button button-primary" href="#menu">Explorar o menu <ArrowRight size={18} /></a>
-                <a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Falar connosco</a>
               </div>
               <div className="hero-footnote"><span className="mini-rule" /> Entregas em Camama Chimbicato <MapPin size={14} /></div>
             </div>
@@ -275,7 +274,7 @@ export default function Home() {
                 <div className="eyebrow eyebrow-blue"><span className="eyebrow-dot" /> O nosso menu</div>
                 <h2>Escolha o seu<br /><em>favorito.</em></h2>
               </div>
-              <div className="heading-side"><p>Consulte os nossos preços e faça a sua encomenda por WhatsApp.</p><a className="text-link" href={whatsappLink} target="_blank" rel="noreferrer">Encomendar agora</a></div>
+              <div className="heading-side"><p>Consulte os nossos preços e faça a sua encomenda por WhatsApp.</p></div>
             </div>
             <div className="product-grid">
               {products.map((product, index) => <ProductCard product={product} index={index} key={product.name} />)}
@@ -287,7 +286,7 @@ export default function Home() {
             <div className="price-grid">
               {priceGroups.map((group, index) => <PriceGroup group={group} index={index} key={group.title} />)}
             </div>
-            <div className="menu-note reveal"><span>Os preços podem variar conforme a quantidade e o tipo de encomenda. Fale connosco para confirmar disponibilidade.</span><a href={whatsappLink} target="_blank" rel="noreferrer">Pedir por WhatsApp <ArrowRight size={16} /></a></div>
+            <div className="menu-note reveal"><span>Os preços podem variar conforme a quantidade e o tipo de encomenda. Fale connosco através do formulário de encomenda.</span></div>
           </div>
         </section>
 
@@ -303,7 +302,6 @@ export default function Home() {
               <h2>Pequenos detalhes.<br /><em>Grandes vontades.</em></h2>
               <p>Na Wikamana, acreditamos que a comida tem o poder de mudar o ritmo de um dia. Por isso, fazemos cada doce e cada salgado com ingredientes escolhidos, receitas honestas e vontade de deixar uma memória boa.</p>
               <div className="signature"><span className="signature-line" /><span>Wikamana</span></div>
-              <a className="button button-outline" href={whatsappLink} target="_blank" rel="noreferrer">Conhecer a Wikamana</a>
             </div>
           </div>
         </section>
@@ -326,7 +324,6 @@ export default function Home() {
               <div className="eyebrow eyebrow-light"><span className="eyebrow-dot" /> A entrega</div>
               <h2>O seu pedido,<br /><em>à sua porta.</em></h2>
               <p>Estamos em Camama Chimbicato e levamos as nossas fornadas até si. Envie uma mensagem, escolha os seus favoritos e tratamos do resto.</p>
-              <a className="button button-light" href={whatsappLink} target="_blank" rel="noreferrer">Pedir pelo WhatsApp</a>
             </div>
             <div className="delivery-details">
               <div className="detail-item"><span className="detail-icon"><MapPin size={20} /></span><div><small>Localização</small><strong>Camama Chimbicato</strong></div></div>
@@ -362,7 +359,6 @@ export default function Home() {
             <p className="closing-kicker">Para a sua próxima pausa</p>
             <h2>Vai querer<br /><em>mais um?</em></h2>
             <p className="closing-text">Uma mensagem basta para começar a escolher.</p>
-            <a className="button button-primary" href={whatsappLink} target="_blank" rel="noreferrer">Falar no WhatsApp</a>
           </div>
         </section>
       </main>
