@@ -1,6 +1,5 @@
 import { useEffect, useState, type FormEvent } from "react";
 import {
-  ArrowRight,
   CakeSlice,
   ChefHat,
   ChevronDown,
@@ -12,7 +11,6 @@ import {
   Menu,
   Phone,
   Sandwich,
-  Send,
   ShoppingBag,
   Truck,
   Utensils,
@@ -238,7 +236,7 @@ export default function Home() {
               <h1>O sabor que faz <em>ficar.</em></h1>
               <p className="hero-lede">Doces e salgados feitos com tempo, cuidado e aquele toque especial que transforma qualquer momento.</p>
               <div className="hero-actions">
-                <a className="button button-primary" href="#menu">Explorar o menu <ArrowRight size={18} /></a>
+                <a className="button button-primary" href="#menu">Explorar o menu</a>
               </div>
               <div className="hero-footnote"><span className="mini-rule" /> Entregas em Camama Chimbicato <MapPin size={14} /></div>
             </div>
@@ -348,7 +346,7 @@ export default function Home() {
               <input id="customer-name" name="name" value={customerName} onChange={(event) => setCustomerName(event.target.value)} placeholder="Como podemos chamar-lhe?" required />
               <label htmlFor="order-message">O seu pedido</label>
               <textarea id="order-message" name="message" value={orderMessage} onChange={(event) => setOrderMessage(event.target.value)} placeholder="Escreva os produtos e quantidades..." rows={5} required />
-              <button className="button button-primary" type="submit">Enviar para o WhatsApp <Send size={16} /></button>
+              <button className="button button-primary" type="submit">Enviar para o WhatsApp</button>
             </form>
           </div>
         </section>
