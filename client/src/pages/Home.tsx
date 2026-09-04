@@ -287,7 +287,7 @@ export default function Home() {
             <div className="about-collage reveal">
               <div className="collage-main"><img src="/manus-storage/empadas_d497de8f.jpg" alt="Empadas douradas preparadas pela Wikamana" loading="lazy" /></div>
               <div className="collage-small"><img src="/manus-storage/doces_c499a1a3.jpg" alt="Sortido de doces Wikamana" loading="lazy" /></div>
-              <div className="collage-label"><span>Desde</span><strong>2024</strong><small>com sabor</small></div>
+              <div className="collage-label"><span>Desde</span><strong>2021</strong><small>com sabor</small></div>
             </div>
             <div className="about-copy reveal delay-2">
               <div className="eyebrow"><span className="eyebrow-dot" /> A Wikamana</div>
@@ -323,7 +323,7 @@ export default function Home() {
               <div className="detail-item"><span className="detail-icon"><MapPin size={20} /></span><div><small>Localização</small><strong>Camama Chimbicato</strong></div></div>
               <div className="detail-item"><span className="detail-icon"><Clock3 size={20} /></span><div><small>Atendimento</small><strong>Todos os dias · por mensagem</strong></div></div>
               <div className="detail-item"><span className="detail-icon"><Truck size={20} /></span><div><small>Entrega</small><strong>Combinamos consigo no WhatsApp</strong></div></div>
-              <div className="delivery-number"><span>939</span><strong>622 421</strong></div>
+              <div className="delivery-number" aria-label="Contacto 939 622 421"><span>939</span><strong>622 421</strong></div>
             </div>
             <div className="delivery-shape shape-one" /><div className="delivery-shape shape-two" />
           </div>
