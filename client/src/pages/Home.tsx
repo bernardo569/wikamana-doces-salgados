@@ -50,13 +50,6 @@ const products = [
     tone: "gold",
   },
   {
-    name: "Cachorro especial",
-    detail: "Quente, completo e com aquela crocância.",
-    tag: "Salgado",
-    image: "/manus-storage/cachorro-quente-optimized_43e88d38.webp",
-    tone: "blue",
-  },
-  {
     name: "Empadas artesanais",
     detail: "Massa dourada e recheio cheio de sabor.",
     tag: "Favorito",
