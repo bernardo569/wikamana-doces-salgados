@@ -96,10 +96,10 @@ const values = [
 const priceGroups = [
   { title: "Salgados", note: "Preço por dúzia", icon: Utensils, items: [["Rissóis de camarão", "7.000 Kz"], ["Rissóis de atum", "7.000 Kz"], ["Pastéis massa tenra", "7.000 Kz"], ["Croquetes de carne", "7.000 Kz"], ["Coxinhas de frango", "7.000 Kz"], ["Empadas de frango", "7.000 Kz"], ["Chamucas de frango", "9.000 Kz"], ["Chamucas vegetais", "9.000 Kz"], ["Mini salgados de forno · 100 und.", "35.000 Kz"], ["Folar de carnes", "35.000 Kz"]] },
   { title: "Doces", note: "Preço por dúzia", icon: CakeSlice, items: [["Pastéis de nata", "12.000 Kz"], ["Bolas de Berlim", "10.000 Kz"]] },
-  { title: "Pregos & acompanhamentos", note: "Preço por unidade", icon: Sandwich, items: [["Prego no pão", "4.500 Kz"], ["Prego no prato", "7.500 Kz"], ["Dose de batata frita", "1.400 Kz"]] },
-  { title: "Bolos & bebidas", note: "Preço por unidade", icon: CupSoda, items: [["Bebidas gasosas · Cola, Sprite, Fanta, Sumol", "800 Kz"], ["Bola de Berlim", "900 Kz"], ["Pastéis de nata", "1.000 Kz"], ["Fatia de bolo", "2.500 Kz"]] },
-  { title: "Sandes", note: "Preço por unidade", icon: Sandwich, items: [["Sandes mista", "1.900 Kz"], ["Croissant misto", "2.000 Kz"], ["Tosta mista", "2.500 Kz"], ["Tosta de atum", "3.000 Kz"]] },
-  { title: "Omeletes", note: "Preço por unidade", icon: Egg, items: [["Omelete simples", "3.000 Kz"], ["Omelete de legumes", "3.500 Kz"], ["Omelete c/ queijo e fiambre", "3.500 Kz"]] },
+  { title: "Pregos & acompanhamentos", note: "Preço por unidade", icon: Sandwich, items: [["Prego no pão", "5.000 Kz"], ["Prego no prato", "7.500 Kz"], ["Dose de batata frita", "2.000 Kz"]] },
+  { title: "Bolos & bebidas", note: "Preço por unidade", icon: CupSoda, items: [["Bebidas gasosas · Cola, Sprite, Fanta, Sumol", "1.000 Kz"], ["Bola de Berlim", "1.000 Kz"], ["Pastéis de nata", "1.100 Kz"], ["Fatia de bolo", "3.000 Kz"]] },
+  { title: "Sandes", note: "Preço por unidade", icon: Sandwich, items: [["Sandes mista", "2.500 Kz"], ["Croissant misto", "3.500 Kz"], ["Tosta mista", "3.500 Kz"], ["Tosta de atum", "4.000 Kz"]] },
+  { title: "Omeletes", note: "Preço por unidade", icon: Egg, items: [["Omelete simples", "4.500 Kz"], ["Omelete de legumes", "5.000 Kz"], ["Omelete mista", "5.000 Kz"]] },
 ];
 
 function SocialIcon({ type }: { type: "instagram" | "facebook" }) {
