@@ -32,35 +32,35 @@ const products = [
     name: "Pastéis de nata",
     detail: "Crocantes por fora, cremosos no centro.",
     tag: "Doce da casa",
-    image: "/manus-storage/pastel-de-nata-optimized_242528a4.webp",
+    image: "./assets/pastel-de-nata-optimized.webp",
     tone: "terracotta",
   },
   {
     name: "Quiche especial",
     detail: "Uma receita generosa para partilhar.",
     tag: "Salgado",
-    image: "/manus-storage/quiche-optimized_dab9488b.webp",
+    image: "./assets/quiche-optimized.webp",
     tone: "blue",
   },
   {
     name: "Sortido de doces",
     detail: "Pequenos momentos, grandes sabores.",
     tag: "Encomenda",
-    image: "/manus-storage/doces-optimized_9c51116c.webp",
+    image: "./assets/doces-optimized.webp",
     tone: "gold",
   },
   {
     name: "Empadas artesanais",
     detail: "Massa dourada e recheio cheio de sabor.",
     tag: "Favorito",
-    image: "/manus-storage/empadas-optimized_ccd3643b.webp",
+    image: "./assets/empadas-optimized.webp",
     tone: "terracotta",
   },
   {
     name: "Mesa de salgados",
     detail: "Para festas, encontros e dias especiais.",
     tag: "Para partilhar",
-    image: "/manus-storage/salgados-optimized_a980698e.webp",
+    image: "./assets/salgados-optimized.webp",
     tone: "gold",
   },
 ];
@@ -116,7 +116,7 @@ function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <a href="#inicio" className={`brand ${compact ? "brand-compact" : ""}`} aria-label="Wikamana, voltar ao início">
       <span className="brand-mark">
-        <img src="/manus-storage/logo-optimized_ff45e914.webp" alt="" />
+        <img src="./assets/logo-optimized.webp" alt="" />
       </span>
       <span className="brand-copy">
         <strong>Wikamana</strong>
@@ -236,7 +236,7 @@ export default function Home() {
             <div className="hero-visual reveal is-visible delay-2">
               <div className="hero-stamp"><span>W</span><small>feito<br />para<br />partilhar</small></div>
               <div className="hero-main-image">
-                <img src="/manus-storage/pastel-de-nata-optimized_242528a4.webp" alt="Pastéis de nata dourados da Wikamana" />
+                <img src="./assets/pastel-de-nata-optimized.webp" alt="Pastéis de nata dourados da Wikamana" />
               </div>
               <div className="floating-card floating-card-top">
                 <span className="floating-icon"><ShoppingBag size={16} /></span>
@@ -284,8 +284,8 @@ export default function Home() {
         <section className="about-section section-pad" id="sobre">
           <div className="container about-grid">
             <div className="about-collage reveal">
-              <div className="collage-main"><img src="/manus-storage/empadas-optimized_ccd3643b.webp" alt="Empadas douradas preparadas pela Wikamana" loading="lazy" /></div>
-              <div className="collage-small"><img src="/manus-storage/doces-optimized_9c51116c.webp" alt="Sortido de doces Wikamana" loading="lazy" /></div>
+              <div className="collage-main"><img src="./assets/empadas-optimized.webp" alt="Empadas douradas preparadas pela Wikamana" loading="lazy" /></div>
+              <div className="collage-small"><img src="./assets/doces-optimized.webp" alt="Sortido de doces Wikamana" loading="lazy" /></div>
               <div className="collage-label"><span>Desde</span><strong>2021</strong><small>com sabor</small></div>
             </div>
             <div className="about-copy reveal delay-2">
