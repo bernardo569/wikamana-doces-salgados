@@ -27,43 +27,13 @@ const navItems = [
   { label: "Entrega", href: "#entrega" },
 ];
 
-const products = [
-  {
-    name: "Pastéis de nata",
-    detail: "Crocantes por fora, cremosos no centro.",
-    tag: "Doce da casa",
-    image: "./assets/pastel-de-nata-optimized.webp",
-    tone: "terracotta",
-  },
-  {
-    name: "Quiche especial",
-    detail: "Uma receita generosa para partilhar.",
-    tag: "Salgado",
-    image: "./assets/quiche-optimized.webp",
-    tone: "blue",
-  },
-  {
-    name: "Sortido de doces",
-    detail: "Pequenos momentos, grandes sabores.",
-    tag: "Encomenda",
-    image: "./assets/doces-optimized.webp",
-    tone: "gold",
-  },
-  {
-    name: "Empadas artesanais",
-    detail: "Massa dourada e recheio cheio de sabor.",
-    tag: "Favorito",
-    image: "./assets/empadas-optimized.webp",
-    tone: "terracotta",
-  },
-  {
-    name: "Mesa de salgados",
-    detail: "Para festas, encontros e dias especiais.",
-    tag: "Para partilhar",
-    image: "./assets/salgados-optimized.webp",
-    tone: "gold",
-  },
-];
+const products: Array<{
+  name: string;
+  detail: string;
+  tag: string;
+  image: string;
+  tone: string;
+}> = [];
 
 const values = [
   {
@@ -87,12 +57,8 @@ const values = [
 ];
 
 const priceGroups = [
-  { title: "Salgados", note: "Preço por dúzia", icon: Utensils, items: [["Rissóis de camarão", "7.000 Kz"], ["Rissóis de atum", "7.000 Kz"], ["Pastéis massa tenra", "7.000 Kz"], ["Croquetes de carne", "7.000 Kz"], ["Coxinhas de frango", "7.000 Kz"], ["Empadas de frango", "7.000 Kz"], ["Chamucas de frango", "9.000 Kz"], ["Chamucas vegetais", "9.000 Kz"], ["Mini salgados de forno · 100 und.", "35.000 Kz"], ["Folar de carnes", "35.000 Kz"]] },
-  { title: "Doces", note: "Preço por dúzia", icon: CakeSlice, items: [["Pastéis de nata", "12.000 Kz"], ["Bolas de Berlim", "10.000 Kz"]] },
-  { title: "Pregos & acompanhamentos", note: "Preço por unidade", icon: Sandwich, items: [["Prego no pão", "5.000 Kz"], ["Prego no prato", "7.500 Kz"], ["Dose de batata frita", "2.000 Kz"]] },
-  { title: "Bolos & bebidas", note: "Preço por unidade", icon: CupSoda, items: [["Bebidas gasosas · Cola, Sprite, Fanta, Sumol", "1.000 Kz"], ["Bola de Berlim", "1.000 Kz"], ["Pastéis de nata", "1.100 Kz"], ["Fatia de bolo", "3.000 Kz"]] },
-  { title: "Sandes", note: "Preço por unidade", icon: Sandwich, items: [["Sandes mista", "2.500 Kz"], ["Croissant misto", "3.500 Kz"], ["Tosta mista", "3.500 Kz"], ["Tosta de atum", "4.000 Kz"]] },
-  { title: "Omeletes", note: "Preço por unidade", icon: Egg, items: [["Omelete simples", "4.500 Kz"], ["Omelete de legumes", "5.000 Kz"], ["Omelete mista", "5.000 Kz"]] },
+  { title: "Salgados", note: "Preço por dúzia", icon: Utensils, items: [["Rissóis de camarão", "7.000 Kz"], ["Rissóis de atum", "7.000 Kz"], ["Coxinhas de frango", "7.000 Kz"], ["Croquetes de carne", "7.000 Kz"], ["Pastéis de massa tenra", "7.000 Kz"], ["Empadas de frango", "7.000 Kz"], ["Chamucas de frango", "9.000 Kz"], ["Box de 100 mini salgados", "35.000 Kz"], ["Folar de carnes", "40.000 Kz"]] },
+  { title: "Doces & bebidas", note: "Preços conforme a lista", icon: CakeSlice, items: [["Bolas de Berlim com creme · dúzia", "11.000 Kz"], ["Bolas de Berlim sem creme · dúzia", "10.000 Kz"], ["Pastéis de nata · dúzia", "13.100 Kz"], ["Gasosa em lata", "800 Kz"], ["Sumol · Coca-Cola · Fanta · Sprite", "Consultar"]] },
 ];
 
 function SocialIcon({ type }: { type: "instagram" | "facebook" }) {
@@ -254,7 +220,7 @@ export default function Home() {
 
         <section className="ticker" aria-label="Especialidades da Wikamana">
           <div className="ticker-track">
-            <span>Pastéis de nata</span><span>Empadas artesanais</span><span>Quiches especiais</span><span>Doces para partilhar</span><span>Pastéis de nata</span><span>Empadas artesanais</span>
+            <span>Rissóis de camarão</span><span>Coxinhas de frango</span><span>Bolas de Berlim</span><span>Pastéis de nata</span><span>Folar de carnes</span><span>Gasosa em lata</span>
           </div>
         </section>
 
@@ -267,17 +233,14 @@ export default function Home() {
               </div>
               <div className="heading-side"><p>Consulte os nossos preços e faça a sua encomenda por WhatsApp.</p></div>
             </div>
-            <div className="product-grid">
-              {products.map((product, index) => <ProductCard product={product} index={index} key={product.name} />)}
-            </div>
             <div className="price-heading reveal">
               <div className="eyebrow eyebrow-blue"><span className="eyebrow-dot" /> Catálogo de preços</div>
-              <p>Escolha os seus favoritos e consulte os valores antes de encomendar.</p>
+              <p>Lista atual de produtos e preços disponíveis para encomenda.</p>
             </div>
             <div className="price-grid">
               {priceGroups.map((group, index) => <PriceGroup group={group} index={index} key={group.title} />)}
             </div>
-            <div className="menu-note reveal"><span>Os preços podem variar conforme a quantidade e o tipo de encomenda. Fale connosco através do formulário de encomenda.</span></div>
+            <div className="menu-note reveal"><span>Esta é a lista atual da Wikamana. Faça o seu pedido através do formulário de encomenda.</span></div>
           </div>
         </section>
 
@@ -285,7 +248,7 @@ export default function Home() {
           <div className="container about-grid">
             <div className="about-collage reveal">
               <div className="collage-main"><img src="./assets/empadas-optimized.webp" alt="Empadas douradas preparadas pela Wikamana" loading="lazy" /></div>
-              <div className="collage-small"><img src="./assets/doces-optimized.webp" alt="Sortido de doces Wikamana" loading="lazy" /></div>
+              <div className="collage-small"><img src="./assets/doces-optimized.webp" alt="Doces da Wikamana" loading="lazy" /></div>
               <div className="collage-label"><span>Desde</span><strong>2021</strong><small>com sabor</small></div>
             </div>
             <div className="about-copy reveal delay-2">
